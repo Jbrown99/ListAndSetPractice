@@ -5,6 +5,9 @@
  */
 package listandsetpractice;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author jbrown99
@@ -18,6 +21,19 @@ public class Practice3 {
         Dog d1 = new Dog("Ralphie",765);
         Dog d2 = new Dog("Lucy",214);
         
+        
+        List employeesAndDogs = new ArrayList();
+        employeesAndDogs.add(e1);
+        employeesAndDogs.add(e2);
+        employeesAndDogs.add(d1);
+        employeesAndDogs.add(d2);
+        
+        
+        
+         for(int i=0;i< employeesAndDogs.size();i++){
+            String h = (String)employeesAndDogs.get(i);
+            System.out.println(h);
+        }
         
         
     }
