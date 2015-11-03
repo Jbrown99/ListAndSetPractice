@@ -31,7 +31,7 @@ public class Practice3 {
         
         
          for(int i=0;i< employeesAndDogs.size();i++){
-            String h = (String)employeesAndDogs.get(i);
+            String h = employeesAndDogs.get(i).toString();
             System.out.println(h);
         }
         

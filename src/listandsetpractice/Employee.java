@@ -38,6 +38,31 @@ public class Employee {
         this.lastName = lastName;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.ssn);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Employee other = (Employee) obj;
+        if (!Objects.equals(this.ssn, other.ssn)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+    
+
 @Override
         public String toString(){
             return "First Name: "+ firstName + "Last Name: " + lastName + "Social Security Num: " + ssn;
